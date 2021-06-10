@@ -1,0 +1,11 @@
+.cart {
+  width: 643px;
+  padding: 48px 54px;
+  background-color: #fff;
+}
+
+.itemCard {
+  margin-top: 18px;
+  border-bottom: 1px solid #dadada;
+  padding: 24px 0px;
+}

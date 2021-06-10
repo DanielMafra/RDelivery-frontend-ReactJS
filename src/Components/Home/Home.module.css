@@ -1,0 +1,6 @@
+.home {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fafafa;
+  height: 100vh;
+}

@@ -1,0 +1,69 @@
+.titlet {
+  font-weight: 600;
+}
+
+.products {
+  width: 100%;
+  margin-left: 85px;
+  margin-top: 48px;
+}
+
+.items {
+  margin-top: 36px;
+  display: flex;
+  flex: 1 1 215px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #fff;
+  padding: 24px;
+  margin: 42px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+}
+
+.card img {
+  margin-top: 24px;
+  align-self: center;
+}
+
+.title {
+  font-weight: 600;
+  margin-top: 14px;
+}
+
+.description {
+  color: #848484;
+  font-weight: 300;
+  max-width: 174px;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.price {
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 8px;
+  color: #fdc844;
+}
+
+.offer {
+  top: 8px;
+  right: 12px;
+  position: absolute;
+  align-self: flex-end;
+  margin-bottom: 12px;
+  background-color: #ff2351;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 8px;
+}
+
+.offer p {
+  font-size: 12px;
+  font-weight: 500;
+}
