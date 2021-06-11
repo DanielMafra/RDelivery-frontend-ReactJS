@@ -1,20 +1,3 @@
-.titlet {
-  font-weight: 600;
-}
-
-.products {
-  width: 100%;
-  margin-left: 85px;
-  margin-top: 48px;
-}
-
-.items {
-  margin-top: 36px;
-  display: flex;
-  flex: 1 1 215px;
-  flex-wrap: wrap;
-}
-
 .card {
   background-color: #fff;
   padding: 24px;
@@ -66,4 +49,17 @@
 .offer p {
   font-size: 12px;
   font-weight: 500;
+}
+
+.enterLeft {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: enterLeft .3s forwards;
+}
+
+@keyframes enterLeft {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
 }

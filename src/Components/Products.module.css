@@ -1,0 +1,16 @@
+.products {
+  width: 70%;
+  padding: 48px 85px 0px 85px;
+  margin-left: 129px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 36px;
+}
+
+.areaProducts {
+  display: flex;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,73 @@
+.cart {
+  background-color: #fff;
+  padding: 48px 54px;
+  /*width: 30%;*/
+  position: fixed;
+  right: 0;
+  height: 100vh;
+  overflow: auto;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+}
+
+.none {
+  font-size: 14px;
+}
+
+.total {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 38px;
+}
+
+.total h4:nth-child(1){
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.price {
+  margin-left: 16px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fdc844;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 92px;
+}
+
+.btn button {
+  background-color: #ff2351;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  width: 397px;
+  height: 51px;
+  cursor: pointer;
+}
+
+.enterLeft {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: enterLeft .3s forwards;
+}
+
+@keyframes enterLeft {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}

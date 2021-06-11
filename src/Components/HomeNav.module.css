@@ -1,0 +1,40 @@
+.nav {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 129px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: fixed;
+  height: 100vh;
+}
+
+.nav a {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 0px;
+  text-decoration: none;
+  color: #848484;
+  font-weight: 500;
+}
+
+.nav a svg {
+  margin-bottom: 6px;
+}
+
+.active {
+  background-color: #fdc844;
+  border-radius: 8px;
+}
+
+.nav a.active {
+  color: #000;
+}
+
+.active path {
+  fill: #000;
+}
