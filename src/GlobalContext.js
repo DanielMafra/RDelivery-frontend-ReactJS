@@ -9,7 +9,25 @@ export const GlobalStorage = ({ children }) => {
   const [total, setTotal] = React.useState(0);
 
   function addCart(item) {
-    setCart(oldArray => [...oldArray, item])
+    item.quantity = 1;
+    item.currentPrice = item.price;
+    setCart(oldArray => [...oldArray, item]);
+  }
+
+  function incrementItem(item) {
+    let indexItem = cart.map((e) => e.id).indexOf(item.id);
+    let updatedCart = [...cart];
+    updatedCart[indexItem].quantity = updatedCart[indexItem].quantity + 1;
+    updatedCart[indexItem].currentPrice = updatedCart[indexItem].currentPrice + updatedCart[indexItem].price;
+    setCart(updatedCart);
+  }
+
+  function decrementItem(item) {
+    let indexItem = cart.map((e) => e.id).indexOf(item.id);
+    let updatedCart = [...cart];
+    updatedCart[indexItem].quantity = updatedCart[indexItem].quantity - 1;
+    updatedCart[indexItem].currentPrice = updatedCart[indexItem].currentPrice - updatedCart[indexItem].price;
+    setCart(updatedCart);
   }
 
   const getProducts = async (category) => {
@@ -20,7 +38,7 @@ export const GlobalStorage = ({ children }) => {
 
   React.useEffect(() => {
     if (cart.length > 0) {
-      const prices = cart.map((item) => item.price);
+      const prices = cart.map((item) => item.currentPrice);
       setTotal(prices.reduce((a, b) => a + b));
     }
   }, [cart]);
@@ -39,7 +57,7 @@ export const GlobalStorage = ({ children }) => {
   }, []);
 
   return (
-    <GlobalContext.Provider value={{ getProducts, listProducts, addCart, cart, total }}>
+    <GlobalContext.Provider value={{ getProducts, listProducts, addCart, cart, total, incrementItem, decrementItem }}>
       {children}
     </GlobalContext.Provider>
   );
