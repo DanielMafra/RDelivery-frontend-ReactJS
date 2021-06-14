@@ -57,6 +57,12 @@
   width: 397px;
   height: 51px;
   cursor: pointer;
+  transition: .3s;
+}
+
+.btn button:hover {
+  background-color: rgb(255, 35, 51);
+  transform: scale(1.01);
 }
 
 .enterLeft {

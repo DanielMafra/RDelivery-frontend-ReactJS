@@ -1,0 +1,23 @@
+.checkout {
+  background-color: #fafafa;
+  display: flex;
+  height: 100vh;
+}
+
+.mainCheckout {
+  margin-top: 16px;
+  margin-left: 16px;
+}
+
+.mainCheckout a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.formArea {
+  margin-top: 32px;
+  margin-left: 64px;
+  justify-self: center;
+}

@@ -1,10 +1,12 @@
 import React from 'react';
 import { GlobalContext } from '../GlobalContext';
+import { useNavigate } from 'react-router-dom';
 import CartItem from './CartItem';
 import styles from './Cart.module.css';
 
-const Cart = () => {
+const Cart = ({ isCheckout }) => {
   const { cart, total } = React.useContext(GlobalContext);
+  const navigate = useNavigate();
 
   return (
     <div className={styles.cart}>
@@ -19,7 +21,11 @@ const Cart = () => {
             <h4 className={styles.price}>R$ {total},00</h4>
           </div>
           <div className={styles.btn}>
-            <button>Finalizar compra</button>
+            {!isCheckout ? (
+              <button onClick={() => navigate('/checkout')}>Finalizar compra</button>
+            ) : (
+              ''
+            )}
           </div>
         </div>
       ) : (

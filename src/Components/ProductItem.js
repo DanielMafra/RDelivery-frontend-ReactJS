@@ -3,7 +3,7 @@ import styles from './ProductItem.module.css';
 
 const ProductItem = ({ inputCart, item }) => {
   return (
-    <div className={`${styles.card} ${styles.enterLeft}`} key={item.id} onClick={() => inputCart(item)}>
+    <div className={`${styles.card} ${styles.enterLeft} ${item.isSelected && styles.disable}`} key={item.id} onClick={!item.isSelected ? () => inputCart(item) : () => false}>
       {item.offer && <div className={styles.offer}><p>Oferta</p></div>}
       <img src={item.img} alt={item.title} />
       <h3 className={styles.title}>{item.title}</h3>

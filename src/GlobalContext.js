@@ -11,6 +11,7 @@ export const GlobalStorage = ({ children }) => {
   function addCart(item) {
     item.quantity = 1;
     item.currentPrice = item.price;
+    item.isSelected = true;
     setCart(oldArray => [...oldArray, item]);
   }
 
@@ -27,6 +28,11 @@ export const GlobalStorage = ({ children }) => {
     let updatedCart = [...cart];
     updatedCart[indexItem].quantity = updatedCart[indexItem].quantity - 1;
     updatedCart[indexItem].currentPrice = updatedCart[indexItem].currentPrice - updatedCart[indexItem].price;
+    if (updatedCart[indexItem].quantity === 0) {
+      updatedCart[indexItem].isSelected = false;
+      updatedCart.splice(indexItem, 1);
+      setCart(updatedCart);
+    }
     setCart(updatedCart);
   }
 
