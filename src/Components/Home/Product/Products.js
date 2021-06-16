@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { GlobalContext } from '../GlobalContext';
+import { GlobalContext } from '../../../GlobalContext';
 import styles from './Products.module.css';
 import ProductItem from './ProductItem';
 

@@ -1,8 +1,8 @@
 import React from 'react';
-import HomeNav from './HomeNav';
+import HomeNav from './Nav/HomeNav';
 import { Routes, Route } from 'react-router-dom';
-import Products from './Products';
-import Cart from './Cart';
+import Products from './Product/Products';
+import Cart from './Cart/Cart';
 import styles from './Home.module.css';
 
 const Home = () => {

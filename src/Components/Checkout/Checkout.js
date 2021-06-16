@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Cart from './Cart';
-import Form from './Form';
+import Cart from '../Home/Cart/Cart';
+import Form from './Form/Form';
 import styles from './Checkout.module.css';
 
 const Checkout = () => {

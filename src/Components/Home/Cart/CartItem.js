@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './CartItem.module.css';
-import { GlobalContext } from '../GlobalContext';
+import { GlobalContext } from '../../../GlobalContext';
 
 const CartItem = ({ product }) => {
   const { incrementItem, decrementItem } = React.useContext(GlobalContext);
