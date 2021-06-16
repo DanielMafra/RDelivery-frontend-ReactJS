@@ -1,0 +1,41 @@
+.wrapper {
+  margin-bottom: 20px;
+}
+
+.input {
+  border: 1px solid #dadada;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: transparent;
+  transition: 0.3s;
+}
+
+.input::placeholder {
+  font-family: 'Poppins';
+  font-size: 16px;
+  color: #848484;
+}
+
+.input:focus,
+.input:hover {
+  outline: none;
+  border-color: #fdc844;
+  background: transparent;
+  
+}
+
+.label {
+  display: block;
+  font-weight: 500;
+  line-height: 1;
+  padding-bottom: 8px;
+}
+
+.error {
+  color: #ff2351;
+  font-size: 14px;
+  margin-top: 4px;
+}
