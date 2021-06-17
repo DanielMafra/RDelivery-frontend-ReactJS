@@ -33,3 +33,23 @@
   line-height: 1;
   padding-bottom: 8px;
 }
+
+.complement {
+  display: block;
+  font-weight: 500;
+  line-height: 1;
+  padding-bottom: 8px;
+  margin-top: 20px;
+}
+
+.error {
+  color: #ff2351;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.address {
+  margin-top: 38px;
+  margin-bottom: 38px;
+  color: #848484;
+}

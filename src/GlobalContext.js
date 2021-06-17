@@ -9,7 +9,7 @@ export const GlobalStorage = ({ children }) => {
   const [total, setTotal] = React.useState(0);
   const [user, setUser] = React.useState(null);
   const [cep, setCep] = React.useState('');
-  const [address, setAddress] = React.useState([]);
+  const [address, setAddress] = React.useState(null);
 
   function addCart(item) {
     item.quantity = 1;
