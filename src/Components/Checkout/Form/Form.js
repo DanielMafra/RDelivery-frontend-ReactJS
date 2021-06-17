@@ -8,14 +8,21 @@ const Form = () => {
   const phone = useForm('phone');
   const name = useForm();
 
+  function handleSubmit(event) {
+    event.preventDefault();
+    console.log(name.value);
+    console.log(phone.value);
+  }
+
   return (
-    <div className={styles.form}>
+    <form onSubmit={handleSubmit} className={styles.form}>
       <h3 className={styles.title}>Seus dados</h3>
       <Input label="Nome" type="text" name="name" placeholder="Digite seu nome" {...name} />
       <Input label="Celular" type="text" name="phone" placeholder="Digite seu número" {...phone} />
       <h3 className={styles.subTitle}>Entrega</h3>
       <RadioDelivery />
-    </div>
+      <button>Confirmar pedido</button>
+    </form>
   );
 };
 
