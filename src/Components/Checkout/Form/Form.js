@@ -1,6 +1,7 @@
 import React from 'react';
 import useForm from '../../../Hooks/useForm';
 import Input from './Fragments/Input';
+import RadioDelivery from './Fragments/RadioDelivery';
 import styles from './Form.module.css';
 
 const Form = () => {
@@ -13,6 +14,7 @@ const Form = () => {
       <Input label="Nome" type="text" name="name" placeholder="Digite seu nome" {...name} />
       <Input label="Celular" type="text" name="phone" placeholder="Digite seu número" {...phone} />
       <h3 className={styles.subTitle}>Entrega</h3>
+      <RadioDelivery />
     </div>
   );
 };
