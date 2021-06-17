@@ -1,4 +1,5 @@
 import React from 'react';
+import Address from './Address';
 import styles from './RadioDelivery.module.css';
 
 const Radio = () => {
@@ -15,7 +16,7 @@ const Radio = () => {
         Delivery
       </label>
       {typeBuy === 'delivery' ? (
-        <p>delivery</p>
+        <Address />
       ) : (
         ''
       )}
