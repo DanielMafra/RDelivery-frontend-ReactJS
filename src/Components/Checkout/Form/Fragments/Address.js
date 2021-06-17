@@ -1,28 +1,9 @@
 import React from 'react';
+import { GlobalContext } from '../../../../GlobalContext';
 import styles from './Address.module.css';
 
 const Address = () => {
-  const [cep, setCep] = React.useState('');
-  const [address, setAddress] = React.useState([]);
-
-  async function getCep(cep) {
-    const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
-    const json = await response.json();
-    console.log(json);
-    setAddress({
-      rua: json.logradouro,
-      cidade: json.localidade,
-      bairro: json.bairro,
-      uf: json.uf,
-      cep: json.cep
-    });
-  }
-
-  React.useEffect(() => {
-    if (cep.length >= 8) {
-      getCep(cep);
-    }
-  }, [cep])
+  const { cep, setCep, address } = React.useContext(GlobalContext);
 
   return (
     <div className={styles.wrapper}>

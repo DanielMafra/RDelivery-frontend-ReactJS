@@ -8,6 +8,8 @@ export const GlobalStorage = ({ children }) => {
   const [cart, setCart] = React.useState([]);
   const [total, setTotal] = React.useState(0);
   const [user, setUser] = React.useState(null);
+  const [cep, setCep] = React.useState('');
+  const [address, setAddress] = React.useState([]);
 
   function addCart(item) {
     item.quantity = 1;
@@ -43,6 +45,24 @@ export const GlobalStorage = ({ children }) => {
     setData(json);
   }
 
+  async function getCep(cep) {
+    const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+    const json = await response.json();
+    setAddress({
+      rua: json.logradouro,
+      cidade: json.localidade,
+      bairro: json.bairro,
+      uf: json.uf,
+      cep: json.cep
+    });
+  }
+
+  React.useEffect(() => {
+    if (cep.length >= 8) {
+      getCep(cep);
+    }
+  }, [cep])
+
   React.useEffect(() => {
     if (cart.length > 0) {
       const prices = cart.map((item) => item.currentPrice);
@@ -65,7 +85,7 @@ export const GlobalStorage = ({ children }) => {
   }, []);
 
   return (
-    <GlobalContext.Provider value={{ getProducts, listProducts, addCart, cart, total, incrementItem, decrementItem, user }}>
+    <GlobalContext.Provider value={{ getProducts, listProducts, addCart, cart, total, incrementItem, decrementItem, user, cep, setCep, address, setAddress }}>
       {children}
     </GlobalContext.Provider>
   );
