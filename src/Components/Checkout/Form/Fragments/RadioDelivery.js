@@ -2,7 +2,7 @@ import React from 'react';
 import Address from './Address';
 import styles from './RadioDelivery.module.css';
 
-const Radio = () => {
+const RadioDelivery = () => {
   const [typeBuy, setTypeBuy] = React.useState('');
 
   return (
@@ -24,4 +24,4 @@ const Radio = () => {
   )
 }
 
-export default Radio;
+export default RadioDelivery;

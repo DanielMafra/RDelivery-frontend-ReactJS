@@ -53,3 +53,14 @@
   margin-bottom: 38px;
   color: #848484;
 }
+
+.subTitle {
+  line-height: 1;
+  margin-top: 52px;
+}
+
+.typePay {
+  font-weight: 600;
+  margin-top: 24px;
+  margin-bottom: 14px;
+}
