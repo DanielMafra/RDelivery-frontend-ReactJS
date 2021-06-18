@@ -4,10 +4,8 @@ import RadioPayment from './RadioPayment';
 import styles from './Address.module.css';
 
 const Address = () => {
-  const { cep, setCep, address } = React.useContext(GlobalContext);
+  const { cep, setCep, number, setNumber, complement, setComplement, address } = React.useContext(GlobalContext);
   const [error, setError] = React.useState(false);
-  const [number, setNumber] = React.useState('');
-  const [complement, setComplement] = React.useState('');
 
   function validateCep() {
     if (cep.length < 8) {

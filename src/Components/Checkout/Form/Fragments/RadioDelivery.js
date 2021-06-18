@@ -1,9 +1,10 @@
 import React from 'react';
+import { GlobalContext } from '../../../../GlobalContext';
 import Address from './Address';
 import styles from './RadioDelivery.module.css';
 
 const RadioDelivery = () => {
-  const [typeBuy, setTypeBuy] = React.useState('');
+  const { typeBuy, setTypeBuy } = React.useContext(GlobalContext);
 
   return (
     <div className={styles.radioDelivery}>

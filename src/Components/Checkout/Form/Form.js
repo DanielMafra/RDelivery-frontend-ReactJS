@@ -1,17 +1,48 @@
 import React from 'react';
 import useForm from '../../../Hooks/useForm';
+import { GlobalContext } from '../../../GlobalContext';
 import Input from './Fragments/Input';
 import RadioDelivery from './Fragments/RadioDelivery';
 import styles from './Form.module.css';
 
 const Form = () => {
+  const { typeBuy, number, complement, address, typePayment, cart, total, order, setOrder } = React.useContext(GlobalContext);
   const phone = useForm('phone');
   const name = useForm();
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.log(name.value);
-    console.log(phone.value);
+    if (name.validate() && phone.validate()) {
+      if (typeBuy !== '' && typeBuy === 'store') {
+        setOrder({
+          name: name.value,
+          phone: phone.value,
+          cart: {
+            ...cart,
+            totalPrice: total
+          }
+        });
+        console.log(order);
+      } else if (typeBuy !== '' && typeBuy === 'delivery' && address !== null) {
+        if (number !== '' && complement !== '' && typePayment !== '') {
+          setOrder({
+            name: name.value,
+            phone: phone.value,
+            cart: {
+              ...cart,
+              totalPrice: total,
+            },
+            address: {
+              ...address,
+              number: number,
+              complement: complement
+            },
+            payment: typePayment
+          })
+          console.log(order);
+        }
+      }
+    }
   }
 
   return (
@@ -21,7 +52,7 @@ const Form = () => {
       <Input label="Celular" type="text" name="phone" placeholder="Digite seu número" {...phone} />
       <h3 className={styles.subTitle}>Entrega</h3>
       <RadioDelivery />
-      <button>Confirmar pedido</button>
+      <button type="submit">Confirmar pedido</button>
     </form>
   );
 };
