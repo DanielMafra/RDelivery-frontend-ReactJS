@@ -1,6 +1,7 @@
 import React from 'react';
 import useForm from '../../../Hooks/useForm';
 import { GlobalContext } from '../../../GlobalContext';
+import { useNavigate } from 'react-router-dom';
 import Input from './Fragments/Input';
 import RadioDelivery from './Fragments/RadioDelivery';
 import styles from './Form.module.css';
@@ -9,6 +10,7 @@ const Form = () => {
   const { typeBuy, number, complement, address, typePayment, cart, total, order, setOrder } = React.useContext(GlobalContext);
   const phone = useForm('phone');
   const name = useForm();
+  const navigate = useNavigate();
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -22,6 +24,7 @@ const Form = () => {
             totalPrice: total
           }
         });
+        navigate('/completed');
         console.log(order);
       } else if (typeBuy !== '' && typeBuy === 'delivery' && address !== null) {
         if (number !== '' && complement !== '' && typePayment !== '') {
@@ -38,7 +41,8 @@ const Form = () => {
               complement: complement
             },
             payment: typePayment
-          })
+          });
+          navigate('/completed');
           console.log(order);
         }
       }

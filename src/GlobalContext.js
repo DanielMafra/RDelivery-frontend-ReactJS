@@ -76,6 +76,14 @@ export const GlobalStorage = ({ children }) => {
   }, [cart]);
 
   React.useEffect(() => {
+    if (typeBuy === 'delivery') {
+      const quantityAddress = window.localStorage.length;
+      window.localStorage.setItem(quantityAddress + 1, JSON.stringify(order.address));
+      console.log(quantityAddress)
+    }
+  }, [order]);
+
+  React.useEffect(() => {
     setListProducts(data);
   }, [data]);
 
