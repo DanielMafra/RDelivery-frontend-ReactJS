@@ -56,7 +56,7 @@ const Form = () => {
       <Input label="Celular" type="text" name="phone" placeholder="Digite seu número" {...phone} />
       <h3 className={styles.subTitle}>Entrega</h3>
       <RadioDelivery />
-      <button type="submit">Confirmar pedido</button>
+      <button className={styles.confirm} type="submit">Confirmar pedido</button>
     </form>
   );
 };

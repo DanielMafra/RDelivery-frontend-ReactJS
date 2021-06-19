@@ -77,9 +77,7 @@ export const GlobalStorage = ({ children }) => {
 
   React.useEffect(() => {
     if (typeBuy === 'delivery') {
-      const quantityAddress = window.localStorage.length;
-      window.localStorage.setItem(quantityAddress + 1, JSON.stringify(order.address));
-      console.log(quantityAddress)
+      window.localStorage.setItem('address', JSON.stringify(order.address));
     }
   }, [order]);
 
@@ -94,7 +92,12 @@ export const GlobalStorage = ({ children }) => {
       setData(json);
     }
     loadData();
-    setUser(window.localStorage.getItem('user'));
+    const addressDefault = window.localStorage.getItem('address');
+    if (addressDefault !== '' && addressDefault !== null && addressDefault !== undefined) {
+      setUser(JSON.parse(addressDefault));
+    } else {
+      setUser(null);
+    }
   }, []);
 
   return (

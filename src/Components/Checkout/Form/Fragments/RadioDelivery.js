@@ -1,10 +1,11 @@
 import React from 'react';
 import { GlobalContext } from '../../../../GlobalContext';
 import Address from './Address';
+import AddressDefault from './AddressDefault';
 import styles from './RadioDelivery.module.css';
 
 const RadioDelivery = () => {
-  const { typeBuy, setTypeBuy } = React.useContext(GlobalContext);
+  const { typeBuy, setTypeBuy, user } = React.useContext(GlobalContext);
 
   return (
     <div className={styles.radioDelivery}>
@@ -16,7 +17,12 @@ const RadioDelivery = () => {
         <input name="delivery" type="radio" value="delivery" className={styles.radio} checked={typeBuy === "delivery"} onChange={({ target }) => setTypeBuy(target.value)} />
         Delivery
       </label>
-      {typeBuy === 'delivery' ? (
+      {typeBuy === 'delivery' && user !== null ? (
+        <AddressDefault />
+      ) : (
+        ''
+      )}
+      {typeBuy === 'delivery' && user === null ? (
         <Address />
       ) : (
         ''
