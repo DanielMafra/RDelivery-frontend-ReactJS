@@ -29,3 +29,14 @@
   text-decoration: underline;
   cursor: pointer;
 }
+
+.subTitle {
+  line-height: 1;
+  margin-top: 52px;
+}
+
+.typePay {
+  font-weight: 600;
+  margin-top: 24px;
+  margin-bottom: 14px;
+}

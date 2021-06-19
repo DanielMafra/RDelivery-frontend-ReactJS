@@ -7,7 +7,7 @@ import RadioDelivery from './Fragments/RadioDelivery';
 import styles from './Form.module.css';
 
 const Form = () => {
-  const { typeBuy, number, complement, address, typePayment, cart, total, order, setOrder } = React.useContext(GlobalContext);
+  const { typeBuy, number, complement, address, typePayment, cart, total, order, setOrder, user } = React.useContext(GlobalContext);
   const phone = useForm('phone');
   const name = useForm();
   const navigate = useNavigate();
@@ -45,6 +45,21 @@ const Form = () => {
           navigate('/completed');
           console.log(order);
         }
+      } else if (typeBuy !== '' && typeBuy === 'delivery' && user !== null) {
+        setOrder({
+          name: name.value,
+          phone: phone.value,
+          cart: {
+            ...cart,
+            totalPrice: total,
+          },
+          address: {
+            ...user
+          },
+          payment: typePayment
+        });
+        navigate('/completed');
+        console.log(order);
       }
     }
   }

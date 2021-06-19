@@ -1,5 +1,6 @@
 import React from 'react';
 import { GlobalContext } from '../../../../GlobalContext';
+import RadioPayment from './RadioPayment';
 import styles from './AddressDefault.module.css';
 
 const AddressDefault = () => {
@@ -14,6 +15,9 @@ const AddressDefault = () => {
         <p>{user.complement}</p>
         <button className={styles.editAddress}>Editar endereço</button>
       </div>
+      <h3 className={styles.subTitle}>Pagamento</h3>
+      <p className={styles.typePay}>Método de pagamento:</p>
+      <RadioPayment />
     </div>
   )
 }
