@@ -77,3 +77,11 @@
     transform: initial;
   }
 }
+
+@media (max-width: 480px){
+
+  .cart {
+    display: none;
+  }
+
+}

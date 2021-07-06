@@ -76,3 +76,13 @@
     transform: initial;
   }
 }
+
+@media (max-width: 480px){
+
+  .card {
+    flex-direction: column;
+    border-radius: 8px;
+    min-width: 100%;
+  }
+
+}

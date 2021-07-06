@@ -2,3 +2,11 @@
   background-color: #fafafa;
   display: flex;
 }
+
+@media (max-width: 480px){
+
+  .home {
+    flex-direction: column;
+  }
+
+}

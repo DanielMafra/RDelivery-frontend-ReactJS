@@ -38,3 +38,15 @@
 .active path {
   fill: #000;
 }
+
+@media (max-width: 480px){
+
+  .nav {
+    flex-direction: row;
+    position: initial;
+    height: auto;
+    width: auto;
+  }
+
+
+}
