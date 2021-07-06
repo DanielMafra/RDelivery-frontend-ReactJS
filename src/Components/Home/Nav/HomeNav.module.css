@@ -45,8 +45,23 @@
     flex-direction: row;
     position: initial;
     height: auto;
-    width: auto;
+    width: 98%;
+    justify-content: initial;
+    overflow: auto;
+    padding: 0px;
+    padding: 16px;
   }
 
+  .nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav a {
+    min-width: 120px;
+    padding: 14px 8px;
+    margin: 0px 16px 0px 0px;
+    border: 1px solid #dadada;
+    border-radius: 8px;
+  }
 
 }
