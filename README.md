@@ -1,3 +1,3 @@
 # RDelivery
 
-![RDelivery](https://i.imgur.com/3wlfVkT.gif)
+![RDelivery](https://im3.ezgif.com/tmp/ezgif-3-215df1a46c9f.gif)
