@@ -80,9 +80,29 @@
 @media (max-width: 480px){
 
   .card {
-    flex-direction: column;
+    flex-direction: row;
     border-radius: 8px;
-    min-width: 100%;
+    max-width: 90vw;
+    margin: 21px 0px 21px 0px;
+    border: 1px solid #dadada;
+  }
+
+  .card img {
+    margin-top: 42px;
+    margin-right: 16px;
+    align-self: flex-start;
+    max-width: 86px;
+  }
+
+  .offer {
+    /*
+    top: 120px;
+    left: 32px;
+    max-width: 64px;
+    position: absolute;
+    text-align: center;
+    */
+    display: none;
   }
 
 }

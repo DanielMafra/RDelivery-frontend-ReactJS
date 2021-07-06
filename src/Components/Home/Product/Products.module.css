@@ -28,4 +28,9 @@
     margin-left: 16px;
   }
 
+  .areaProducts {
+    width: 100vw;
+    justify-content: center;
+  }
+
 }
