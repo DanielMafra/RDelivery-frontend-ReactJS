@@ -1,0 +1,53 @@
+.finishContainer {
+  background-color: #fafafa;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.orderFinish {
+  display: flex;
+  align-items: center;
+}
+
+.orderFinish h2 {
+  margin-left: 8px;
+  color: #008000;
+}
+
+ion-icon {
+  font-size: 24px;
+  color: #008000;
+}
+
+.total {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 38px;
+}
+
+.total h4:nth-child(1){
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.price {
+  margin-left: 16px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fdc844;
+}
+
+.orderContainer {
+  background-color: #ffffff;
+  padding: 16px 32px;
+  border-radius: 8px;
+  margin-top: 32px;
+}
+
+.orderStore {
+  margin-top: 64px;
+}
