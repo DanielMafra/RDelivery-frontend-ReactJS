@@ -51,3 +51,15 @@ ion-icon {
 .orderStore {
   margin-top: 64px;
 }
+
+@media (max-width: 480px){
+
+  .finishContainer {
+    background-color: #ffffff;
+  }
+
+  .orderStore {
+    margin: 64px 24px;
+  }
+
+}

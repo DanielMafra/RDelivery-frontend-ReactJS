@@ -4,7 +4,11 @@ import RadioPayment from './RadioPayment';
 import styles from './AddressDefault.module.css';
 
 const AddressDefault = () => {
-  const { user } = React.useContext(GlobalContext);
+  const { user, setUser } = React.useContext(GlobalContext);
+
+  function handleAddress() {
+    setUser(null);
+  }
 
   return (
     <div>
@@ -13,7 +17,7 @@ const AddressDefault = () => {
         <p>{user.rua}, {user.number}</p>
         <p>{user.cidade} - {user.uf}</p>
         <p>{user.complement}</p>
-        <button className={styles.editAddress}>Editar endereço</button>
+        <button className={styles.editAddress} onClick={handleAddress}>Editar endereço</button>
       </div>
       <h3 className={styles.subTitle}>Pagamento</h3>
       <p className={styles.typePay}>Método de pagamento:</p>

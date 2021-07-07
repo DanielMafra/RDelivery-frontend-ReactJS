@@ -102,7 +102,7 @@ export const GlobalStorage = ({ children }) => {
   }, []);
 
   return (
-    <GlobalContext.Provider value={{ getProducts, listProducts, addCart, cart, total, incrementItem, decrementItem, user, typeBuy, setTypeBuy, cep, setCep, number, setNumber, complement, setComplement, typePayment, setTypePayment, address, setAddress, order, setOrder, openCart, setOpenCart }}>
+    <GlobalContext.Provider value={{ getProducts, listProducts, addCart, cart, total, incrementItem, decrementItem, user, setUser, typeBuy, setTypeBuy, cep, setCep, number, setNumber, complement, setComplement, typePayment, setTypePayment, address, setAddress, order, setOrder, openCart, setOpenCart }}>
       {children}
     </GlobalContext.Provider>
   );
