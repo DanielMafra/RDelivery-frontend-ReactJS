@@ -21,3 +21,21 @@
   margin-left: 64px;
   justify-self: center;
 }
+
+@media (max-width: 480px){
+
+  .checkout {
+    height: auto;
+  }
+
+  .mainCheckout {
+    height: 100%;
+    margin: 16px 0px 0px 0px;
+  }
+
+  .formArea{
+    margin-left: 0px;
+    max-width: 100vw;
+  }
+  
+}
