@@ -11,7 +11,7 @@ const Home = () => {
   const mobile = useMedia('(max-width: 480px)');
   const { openCart, setOpenCart } = React.useContext(GlobalContext);
 
-  function handleOpenMenu() {
+  function handleOpenCart() {
     setOpenCart(!openCart);
   }
 
@@ -19,12 +19,8 @@ const Home = () => {
     <div className={styles.home}>
       {mobile && (
         <div className={styles.btnCart}>
-          <button onClick={handleOpenMenu}>
-            {!openCart ? (
-              <ion-icon name="cart-outline"></ion-icon>
-            ) : (
-              <ion-icon name="close-outline"></ion-icon>
-            )}
+          <button onClick={handleOpenCart}>
+            <ion-icon name="cart-outline"></ion-icon>
           </button>
         </div>
       )}

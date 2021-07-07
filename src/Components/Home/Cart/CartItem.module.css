@@ -71,3 +71,29 @@
     transform: initial;
   }
 }
+
+@media (max-width: 480px){
+
+  .bgImage {
+    width: 54px;
+    height: auto;
+    padding: 10px 8px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .product h4 {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .product button {
+    text-align: initial;
+  }
+
+  .price {
+    font-size: 16px;
+    margin-left: 16px;
+  }
+
+}

@@ -88,4 +88,25 @@
     display: block;
   }
 
+  .btnCloseCart {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #000;
+    font-weight: 600;
+    font-size: 16px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+  }
+
+  .title {
+    margin-top: 32px;
+  }
+
+  .cart {
+    width: 100%;
+    padding: 16px;
+  }
+
 }
