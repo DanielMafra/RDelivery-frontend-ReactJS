@@ -45,11 +45,12 @@
     flex-direction: row;
     position: initial;
     height: auto;
-    width: 98%;
+    width: 100%;
     justify-content: initial;
     overflow: auto;
     padding: 0px;
     padding: 16px;
+    margin-top: 58px;
   }
 
   .nav::-webkit-scrollbar {

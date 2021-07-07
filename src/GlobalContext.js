@@ -5,6 +5,7 @@ export const GlobalContext = React.createContext();
 export const GlobalStorage = ({ children }) => {
   const [data, setData] = React.useState([]);
   const [listProducts, setListProducts] = React.useState([]);
+  const [openCart, setOpenCart] = React.useState(false);
   const [cart, setCart] = React.useState([]);
   const [total, setTotal] = React.useState(0);
   const [user, setUser] = React.useState(null);
@@ -101,7 +102,7 @@ export const GlobalStorage = ({ children }) => {
   }, []);
 
   return (
-    <GlobalContext.Provider value={{ getProducts, listProducts, addCart, cart, total, incrementItem, decrementItem, user, typeBuy, setTypeBuy, cep, setCep, number, setNumber, complement, setComplement, typePayment, setTypePayment, address, setAddress, order, setOrder }}>
+    <GlobalContext.Provider value={{ getProducts, listProducts, addCart, cart, total, incrementItem, decrementItem, user, typeBuy, setTypeBuy, cep, setCep, number, setNumber, complement, setComplement, typePayment, setTypePayment, address, setAddress, order, setOrder, openCart, setOpenCart }}>
       {children}
     </GlobalContext.Provider>
   );

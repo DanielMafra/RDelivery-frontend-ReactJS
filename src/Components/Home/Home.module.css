@@ -10,4 +10,28 @@
     background-color: #ffffff;
   }
 
+  .btnCart {
+    position: absolute;
+    z-index: 9999;
+    top: 16px;
+    right: 16px;
+  }
+
+  .btnCart button {
+    background-color: #ff2351;
+    border: none;
+    max-width: 42px;
+    max-height: 42px;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+  }
+
+  .btnCart button > ion-icon {
+    color: #ffffff;
+  }
+
 }

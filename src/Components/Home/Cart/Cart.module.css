@@ -80,8 +80,12 @@
 
 @media (max-width: 480px){
 
-  .cart {
+  .closeCart {
     display: none;
+  }
+
+  .openCart {
+    display: block;
   }
 
 }

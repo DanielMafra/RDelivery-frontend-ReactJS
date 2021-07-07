@@ -94,15 +94,4 @@
     max-width: 86px;
   }
 
-  .offer {
-    /*
-    top: 120px;
-    left: 32px;
-    max-width: 64px;
-    position: absolute;
-    text-align: center;
-    */
-    display: none;
-  }
-
 }

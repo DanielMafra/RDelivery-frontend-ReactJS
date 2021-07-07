@@ -5,11 +5,11 @@ import CartItem from './CartItem';
 import styles from './Cart.module.css';
 
 const Cart = ({ isCheckout }) => {
-  const { cart, total } = React.useContext(GlobalContext);
+  const { cart, total, openCart } = React.useContext(GlobalContext);
   const navigate = useNavigate();
 
   return (
-    <div className={styles.cart}>
+    <div className={`${styles.cart} ${openCart ? styles.openCart : styles.closeCart}`}>
       <h2 className={styles.title}>Seu pedido</h2>
       {cart.length > 0 ? (
         <div className={styles.enterLeft}>
