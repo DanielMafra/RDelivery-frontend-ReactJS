@@ -22,10 +22,24 @@
   justify-self: center;
 }
 
+@keyframes enterLeft {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}
+
 @media (max-width: 480px){
 
   .checkout {
     height: auto;
+  }
+
+  .openCheckout {
+    display: block;
+    opacity: 0;
+    transform: translateX(500px);
+    animation: enterLeft .3s forwards;
   }
 
   .mainCheckout {

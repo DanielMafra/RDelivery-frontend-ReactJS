@@ -86,6 +86,9 @@
 
   .openCart {
     display: block;
+    opacity: 0;
+    transform: translateX(500px);
+    animation: enterLeft .3s forwards;
   }
 
   .btnCloseCart {

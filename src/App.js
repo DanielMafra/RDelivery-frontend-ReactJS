@@ -12,6 +12,7 @@ function App() {
       <GlobalStorage>
         <Routes>
           <Route path="/*" element={<Home />} />
+          <Route path="rdelivery" element={<Home />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/completed" element={<Finish />} />
         </Routes>
