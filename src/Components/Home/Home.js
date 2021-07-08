@@ -10,7 +10,7 @@ import styles from './Home.module.css';
 
 const Home = () => {
   const mobile = useMedia('(max-width: 480px)');
-  const { openCart, setOpenCart, openObs } = React.useContext(GlobalContext);
+  const { openCart, setOpenCart, openObs, cart } = React.useContext(GlobalContext);
 
   function handleOpenCart() {
     setOpenCart(!openCart);
@@ -22,6 +22,11 @@ const Home = () => {
         <div className={styles.btnCart}>
           <button onClick={handleOpenCart}>
             <ion-icon name="cart-outline"></ion-icon>
+            {cart.length !== 0 ? (
+              <div className={styles.badgeQuantity}>
+                {cart.length}
+              </div>
+            ) : ''}
           </button>
         </div>
       )}

@@ -89,15 +89,12 @@
   }
 
   .btnCloseCart {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    color: #000;
-    font-weight: 600;
-    font-size: 16px;
-    position: absolute;
-    top: 8px;
-    left: 8px;
+      color: #000;
+      font-weight: 600;
+      font-size: 24px;
+      border: none;
+      cursor: pointer;
+      background-color: transparent;
   }
 
   .title {

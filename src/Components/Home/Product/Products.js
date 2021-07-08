@@ -15,11 +15,12 @@ const Products = () => {
   }, [product]);
 
   function handleClick(product) {
-    if (mobile) {
-      alert('isMobile');
-    } else {
-      addCart(product)
-    }
+    addCart(product)
+    //if (mobile) {
+    //alert('isMobile');
+    //} else {
+    //addCart(product)
+    //}
   }
 
   return (
