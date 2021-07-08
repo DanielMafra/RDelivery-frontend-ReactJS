@@ -1,19 +1,25 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { GlobalContext } from '../../../GlobalContext';
+import useMedia from '../../../Hooks/useMedia';
 import styles from './Products.module.css';
 import ProductItem from './ProductItem';
 
 const Products = () => {
   const { getProducts, listProducts, addCart } = React.useContext(GlobalContext);
   const { product } = useParams();
+  const mobile = useMedia('(max-width: 480px)');
 
   React.useEffect(() => {
     product && getProducts(product);
   }, [product]);
 
   function handleClick(product) {
-    addCart(product)
+    if (mobile) {
+      alert('isMobile');
+    } else {
+      addCart(product)
+    }
   }
 
   return (
