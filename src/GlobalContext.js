@@ -6,6 +6,9 @@ export const GlobalStorage = ({ children }) => {
   const [data, setData] = React.useState([]);
   const [listProducts, setListProducts] = React.useState([]);
   const [openCart, setOpenCart] = React.useState(false);
+  const [openObs, setOpenObs] = React.useState(false);
+  const [obs, setObs] = React.useState(null);
+  const [idObs, setIdObs] = React.useState(null);
   const [cart, setCart] = React.useState([]);
   const [total, setTotal] = React.useState(0);
   const [user, setUser] = React.useState(null);
@@ -22,6 +25,13 @@ export const GlobalStorage = ({ children }) => {
     item.currentPrice = item.price;
     item.isSelected = true;
     setCart(oldArray => [...oldArray, item]);
+  }
+
+  function addObs(id) {
+    let indexItem = cart.map((e) => e.id).indexOf(id);
+    let updatedCart = [...cart];
+    updatedCart[indexItem].obs = obs;
+    setCart(updatedCart);
   }
 
   function incrementItem(item) {
@@ -102,7 +112,7 @@ export const GlobalStorage = ({ children }) => {
   }, []);
 
   return (
-    <GlobalContext.Provider value={{ getProducts, listProducts, addCart, cart, total, incrementItem, decrementItem, user, setUser, typeBuy, setTypeBuy, cep, setCep, number, setNumber, complement, setComplement, typePayment, setTypePayment, address, setAddress, order, setOrder, openCart, setOpenCart }}>
+    <GlobalContext.Provider value={{ getProducts, listProducts, addCart, cart, total, incrementItem, decrementItem, user, setUser, typeBuy, setTypeBuy, cep, setCep, number, setNumber, complement, setComplement, typePayment, setTypePayment, address, setAddress, order, setOrder, openCart, setOpenCart, openObs, setOpenObs, idObs, setIdObs, obs, setObs, addObs }}>
       {children}
     </GlobalContext.Provider>
   );

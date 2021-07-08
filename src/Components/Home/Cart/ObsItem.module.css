@@ -1,0 +1,78 @@
+.bgObs {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.areaObs {
+  background-color: #ffffff;
+  width: 30%;
+  padding: 32px 16px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.areaObs h3 {
+  text-align: center;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.areaObs textarea {
+  width: 100%;
+  height: 64px;
+  margin-bottom: 16px;
+  border: 1px solid #dadada;
+  padding: 0px;
+}
+
+.btnClose {
+  color: #808080;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 4px;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  cursor: pointer;
+}
+
+.btnsObs {
+  display: flex;
+  justify-content: center;
+}
+
+.btnsObs button {
+  padding: 6px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.btnsObs button:first-of-type {
+  background-color: transparent;
+  border: 1px solid #808080;
+  color: #808080;
+}
+
+.btnsObs button:last-of-type {
+  margin-left: 16px;
+  background-color: #ff2351;
+  color: #ffffff;
+}
+
+@media (max-width: 480px){
+
+  .areaObs {
+    width: 90%;
+  }
+
+}

@@ -5,11 +5,12 @@ import { GlobalContext } from '../../GlobalContext';
 import useMedia from '../../Hooks/useMedia';
 import Products from './Product/Products';
 import Cart from './Cart/Cart';
+import ObsItem from './Cart/ObsItem';
 import styles from './Home.module.css';
 
 const Home = () => {
   const mobile = useMedia('(max-width: 480px)');
-  const { openCart, setOpenCart } = React.useContext(GlobalContext);
+  const { openCart, setOpenCart, openObs } = React.useContext(GlobalContext);
 
   function handleOpenCart() {
     setOpenCart(!openCart);
@@ -30,6 +31,7 @@ const Home = () => {
         <Route path="/:product" element={<Products />} />
       </Routes>
       <Cart />
+      {openObs && <ObsItem />}
     </div>
   );
 };

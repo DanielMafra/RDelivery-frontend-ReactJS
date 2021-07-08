@@ -3,7 +3,12 @@ import styles from './CartItem.module.css';
 import { GlobalContext } from '../../../GlobalContext';
 
 const CartItem = ({ product, isFinish }) => {
-  const { incrementItem, decrementItem } = React.useContext(GlobalContext);
+  const { incrementItem, decrementItem, openObs, setOpenObs, setIdObs } = React.useContext(GlobalContext);
+
+  function openObsBox() {
+    setOpenObs(!openObs);
+    setIdObs(product.id);
+  }
 
   return (
     <div className={`${styles.item} ${styles.enterLeft}`}>
@@ -17,7 +22,7 @@ const CartItem = ({ product, isFinish }) => {
       </div>
       <div className={styles.product}>
         <h4>{product.title}</h4>
-        {!isFinish && <button>Adicionar observação</button>}
+        {!isFinish && <button onClick={openObsBox}>{product.obs ? product.obs : "Adicionar observação"}</button>}
       </div>
       <h4 className={styles.price}>R$ {product.currentPrice},00</h4>
     </div>
