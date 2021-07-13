@@ -8,7 +8,7 @@ import ProductItem from './ProductItem';
 const Products = () => {
   const { getProducts, listProducts, addCart } = React.useContext(GlobalContext);
   const { product } = useParams();
-  const mobile = useMedia('(max-width: 480px)');
+  //const mobile = useMedia('(max-width: 480px)');
 
   React.useEffect(() => {
     product && getProducts(product);
@@ -16,11 +16,15 @@ const Products = () => {
 
   function handleClick(product) {
     addCart(product)
-    //if (mobile) {
-    //alert('isMobile');
-    //} else {
-    //addCart(product)
-    //}
+    /*
+    if you want to change the way the product is added
+    to the cart in the version below, you can use this logic:
+    if (mobile) {
+        //do something different
+      } else {
+        addCart(product) //use the default function
+      }
+    */
   }
 
   return (
