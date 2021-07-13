@@ -27,6 +27,7 @@ export const GlobalStorage = ({ children }) => {
     setCart(oldArray => [...oldArray, item]);
   }
 
+  // add note to cart item
   function addObs(id) {
     let indexItem = cart.map((e) => e.id).indexOf(id);
     let updatedCart = [...cart];
@@ -73,12 +74,14 @@ export const GlobalStorage = ({ children }) => {
     });
   }
 
+  // wait for the CEP to be filled in with 8 digits to make the request
   React.useEffect(() => {
     if (cep.length >= 8) {
       getCep(cep);
     }
   }, [cep])
 
+  // watch the cart changes to calculate the total price.
   React.useEffect(() => {
     if (cart.length > 0) {
       const prices = cart.map((item) => item.currentPrice);
@@ -86,6 +89,7 @@ export const GlobalStorage = ({ children }) => {
     }
   }, [cart]);
 
+  // save the address in localStorage after finalizing the order
   React.useEffect(() => {
     if (typeBuy === 'delivery') {
       window.localStorage.setItem('address', JSON.stringify(order.address));
@@ -96,6 +100,7 @@ export const GlobalStorage = ({ children }) => {
     setListProducts(data);
   }, [data]);
 
+  // loads product list and default localStorage address
   React.useEffect(() => {
     async function loadData() {
       const response = await fetch('https://my-json-server.typicode.com/danielmafra/api/burguers');
