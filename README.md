@@ -63,7 +63,7 @@ You can find out more about at https://viacep.com.br/
 ## Features
 
 - Consume data through API
-- Breakpoints for desktop and smartphone
+- Breakpoints for Desktop and Smartphone
 - Increment and decrement products in the cart
 - Add note to product
 - Form data validation
